@@ -45,7 +45,7 @@ router.put('/:id', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    ActiontDb.remove(req.params.id)
+    ActionDb.remove(req.params.id)
     .then(count => {
         if (count) {
             res.status(200).json({message: 'action deleted'})
